@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  
+<!-- Mirrored from icedrive.net/login?#/support/open-ticket by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Aug 2023 17:45:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Sign in to your Icedrive cloud storage account">
+    <meta name="author" content="icedrive login, icedrive sign in">
+
+    <title>Login - Icedrive</title>
+    
+    <!-- CSS Includes -->
+        <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    
+	<!-- Production -->
+    <link href="frontend/css/min/bs-grid.min.css" rel="stylesheet">   
+    	<link href="frontend/builds/icedrive.frontend.2006.min.css" rel="stylesheet">
+
+    <!-- Fonts -->	
+    <link href="frontend/fonts/roboto.css" rel="stylesheet">
+    <link href="frontend/fonts/gamja/inc.css" rel="stylesheet">
+    <link href="frontend/fonts/fa/css/all.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+	
+    <div class="login-wrap">
+    	<!-- Left -->
+    	<div class="left">
+        	<div class="mountains"> 
+            	<center>          	
+                    <div class="logo font-q-semi">
+                        <a href="index.html"><img  class="noselect nodrag" src="frontend/img/icon-sm.png" /><span class="mob-hide">icedrive</span></a>
+                    </div>   
+                </center>  
+            </div>
+        </div>
+        <div class="right">
+        	
+            <div class="wrap">
+            	<div class="icon-login-mob">
+                	<a href="index.html"><img src="frontend/img/icon-sm.png" class="noselect nodrag" /></a>
+                </div>
+
+                <div class="login-form-wrap">
+                    <p class="float-right col-grey txt-signup"><a href="#" class="action-password-reset">Forgot Password?</a></p>
+                    <h1 class="font-gr-bold col-dark login-title">Login</h1>
+                    
+                        <form class="frm-api" id="frm-login">
+                            <div class="error">&nbsp;</div>
+                            <input type="hidden" name="action" value="login" />
+                            <input type="hidden" name="redir"   value="" />
+                            <input type="text" class="form-block form-text" placeholder="Email Address" name="email" />
+                            <input type="password" class="form-block form-text" placeholder="Password" name="password" />
+                            <br />
+                            <button type="submit" class="btn btn-main block noselect nodrag btn-submit">Sign In</button>
+                        </form>
+                        
+                        <a class="btn btn-white noselect nodrag action-register" data-package="0">Create Account</a>
+                </div>
+            </div>
+        
+        </div>
+    
+    </div>
+
+    <!-- JS Includes -->
+        <!-- Overlay -->
+    <div id="overlay"></div>
+
+    <!-- Modal -->
+    <div id="modal-global">
+  		<div id="modal-close" class="mob-only nodrag noselect"><span>&times;</span></div>
+        <div class="title" style="font-size:26px; margin-bottom:28px;">&nbsp;</div>
+		<div class="modal-content">&nbsp;</div>
+    </div>
+
+
+	<!-- Production -->
+    <script src="frontend/js/min/jquery-3.3.1.min.js"></script>
+    <script src="frontend/builds/icedrive.frontend.2006.min.js"></script>
+    	<script>
+    
+    <!-- Breakout -->
+    
+    this.top.location !== this.location && (this.top.location = this.location);
+	
+	var $redir = window.location.hash.substr(1);
+	
+	if($redir)
+	{
+		if($redir == 'forgot-password')
+		{
+			modalForgotPassword();
+		}
+		else
+		{
+			$("#frm-login input[name=redir]").val($redir);
+			history.replaceState({}, "Login", "/login");
+		}
+	}
+	
+	$("#frm-login input[name=email]").focus();
+    </script>
+  </body>
+
+
+<!-- Mirrored from icedrive.net/login?#/support/open-ticket by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Aug 2023 17:45:02 GMT -->
+</html>
